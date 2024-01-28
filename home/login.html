@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
+    <style>
+        body {
+            background-image:url("logo2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            min-height:100%;
+            text-align: center; /* Center-align text in the body */
+            font-family: 'Roboto', sans-serif; /* Font style */
+            color: #33ccff; /* Text color */
+        }
+
+        .container {
+            width: 300px;
+            padding: 30px;
+            align:centre;
+            margin-top:50px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .container h1,
+        .container form label,
+        .container form input,
+        .container form button {
+            text-align: center; /* Center-align text in the container */
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .container input[type="submit"] {
+            background-color: #2ecc71; /* Button color */
+            color: BLACK;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .container input[type="submit"]:hover {
+            background-color: #27ae60; /* Button color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Login</h1>
+        
+        <!-- Google Sign-In Button -->
+        <div id="g_id_onload"
+            data-client_id="http://627164574521-6napvob87b6ps9t0q9r8tdo0518jk53e.apps.googleusercontent.com/"
+            data-login_uri="https://your.domain/your_login_endpoint"
+            data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-logo_alignment="left">
+        </div>
+
+        <!-- Regular Login Form -->
+        <form action="/login" method="post">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+           
+            <nav></nav>
+            <a href="home.html">login</a></nav>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

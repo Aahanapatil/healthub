@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=HONK&display=swap">
+
+  <link rel="stylesheet" href="style3.css">
+  <center><title>Prescription Reminder</title></center>
+</head>
+<body>
+  <header>
+    <center><h1>Prescription Reminder</h1></center>
+  </header>
+
+  <section id="medicine-reminder-section">
+    <center><h2>Helping you be consistent</h2></center>
+    <form id="medicine-reminder-form">
+      <table>
+        <thead>
+          <tr>
+            <th>Medicine</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="medicine1" required></td>
+            <td><input type="time" name="time1" required></td>
+          </tr><br><br>
+          <tr>
+            <td><input type="text" name="medicine2" required></td>
+            <td><input type="time" name="time2" required></td>
+          </tr><br><br>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table><br>
+      <button type="submit">Set Reminders</button>
+    </form>
+  </section>
+
+  <script src="script2.js"></script>
+</body>
+</html>

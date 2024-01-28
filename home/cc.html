@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #53a6da, #3087bf);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .services-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            background-color: #e0f7fa;
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bb5;
+        }
+
+        .service-description {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Colors */
+        .general-checkup {
+            background-color: #6fb2df; /* Blue */
+        }
+
+        .vaccinations {
+            background-color: #70cc96; /* Green */
+        }
+
+        .obstetrics-gynaecology {
+            background-color: #6fb2df; /* Blue */
+        }
+
+        .paediatrician {
+            background-color: #70cc96; /* Green */
+        }
+
+.dentist {
+    background-color: #6fb2df; /* Blue */
+}
+
+.cardiologist {
+    background-color: #70cc96; /* Green */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1 style="text-align: center; color: #007bb5;">Our Services</h1>
+<div class="services-section">
+<div class="service-item general-checkup" onclick="changeColor(this)">
+    <div class="service-title">General Check-up</div>
+    <div class="service-description">Our website offers a comprehensive check-up to ensure a seamless online experience for medical clinic users.</div>
+</div>
+
+<div class="service-item vaccinations" onclick="changeColor(this)">
+    <div class="service-title">Vaccinations</div>
+    <div class="service-description">Our wide selection of vaccines and experienced medical staff provide quality protection against illness and disease.</div>
+</div>
+
+<div class="service-item obstetrics-gynaecology" onclick="changeColor(this)">
+    <div class="service-title">OBSTETRICS & GYNAECOLOGY</div>
+    <div class="service-description">- Dr. E. R. CHANDRAKALA, MD</div>
+</div>
+
+<div class="service-item paediatrician" onclick="changeColor(this)">
+    <div class="service-title">PAEDIATRICIAN</div>
+    <div class="service-description">- Dr. TEJAS DEEPAK, MD</div>
+</div>
+
+<div class="service-item dentist" onclick="changeColor(this)">
+    <div class="service-title">DENTIST</div>
+    <div class="service-description">- Dr. SATHYENDER KUMAR, MD & Dr. KRISHNA JOTHI, MD</div>
+</div>
+
+<div class="service-item cardiologist" onclick="changeColor(this)">
+    <div class="service-title">CARDIOLOGIST</div>
+    <div class="service-description">- Dr. SAMBASHIVA RAO, MD</div>
+</div>
+</div>
+</div>
+
+<script>
+function changeColor(element) {
+// Reset all services to their original color
+document.querySelectorAll('.service-item').forEach(item => {
+    item.style.backgroundColor = '';
+});
+
+// Change the color of the clicked service
+element.style.backgroundColor = '#3498db'; // You can set to blue or any other color
+}
+</script>
+
+</body>
+</html>

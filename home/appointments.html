@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Booking</title>
+    <link rel="stylesheet" href="stylea.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('logo.jpg') no-repeat center center fixed; /* Replace 'your-image-url.jpg' with the URL or path to your image */
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background: none; /* Remove the background color */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Light overlay on top of the image */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #confirmation {
+            background-color: rgba(40, 167, 69, 0.8); /* Light green overlay on top of the image */
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* Hide confirmation section by default */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Medical Appointment Booking</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="appointmentForm">
+            <h2>Book an Appointment</h2>
+            <form id="bookingForm">
+                <label for="doctor">Select Doctor:</label>
+                <select id="doctor" required>
+                    <option value="dr. D Radhika">Dr. D Radhika</option>
+                    <option value="Dr. Jenny Mercy Augustine">Dr. Jenny Mercy Augustine</option>
+                    <option value="Dr. K Madhu">Dr. K Madhu</option>
+                    <option value="Dr. K Naga jyothi">Dr. K Naga jyothi</option>
+                    <option value="dr-smith">Mr Mohd. azhar Kothwal</option>
+                    <option value="dr-jones">Dr. Jones</option>
+                    <!-- Add more doctors as needed -->
+                </select><br><br>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" required><br><br>
+
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" required><br><br>
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required><br><br>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <section id="confirmation" class="hidden">
+            <h2>Appointment Confirmed!</h2>
+            <p>Thank you, <span id="confirmedName"></span>! Your appointment with <span id="confirmedDoctor"></span> on <span id="confirmedDate"></span> at <span id="confirmedTime"></span> has been booked.</p>
+        </section>
+    </main>
+
+    <script src="scripta.js"></script>
+</body>
+</html>
